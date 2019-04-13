@@ -9,11 +9,11 @@
 - (VirtualBox) Devices > Insert Guest Additions CD Image...
 - ```bash
    su
-   apt install linux-headers-$(uname -r)
-   apt install gcc make perl
-   mount -o remount,exec /media/cdrom0
-   cd /mnt/cdrom0
-   bash -x ./VBoxLinuxAdditions.run
+   apt install linux-headers-$(uname -r) gcc make perl
+   mkdir GuestAdditions
+   cp -rf /mnt/cdrom/* GuestAdditions/
+   cd GuestAdditions
+   ./VBoxLinuxAdditions.run
    ```
 ### Set up sudo
    ```bash
