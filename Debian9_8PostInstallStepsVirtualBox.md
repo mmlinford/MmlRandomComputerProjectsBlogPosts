@@ -19,5 +19,5 @@
    ```bash
    su
    apt install sudo
-   usermod -aG username
+   usermod -aG sudo username
    ```
