@@ -16,8 +16,12 @@
    ./VBoxLinuxAdditions.run
    ```
 ### Set up sudo
-   ```bash
-   su
-   apt install sudo
-   usermod -aG sudo username
-   ```
+```bash
+su
+apt install sudo
+usermod -aG sudo username
+```
+### Add user to the VirtualBox share folders group
+```bash
+sudo usermod -aG vboxsf
+```
